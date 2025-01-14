@@ -1,0 +1,34 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="650"
+        x:Class="DiceRoller.MainWindow"
+        Title="DiceRoller"
+		Width="500" Height="610" Padding="20"
+		CanResize="False"
+		Icon="Assets/icon.png">
+	<StackPanel Orientation="Vertical" Spacing="10">
+		<StackPanel x:Name="DiceContainer" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10" />
+
+		<TextBlock Name="ResultText" HorizontalAlignment="Center" Text="Click the dice to roll!" FontSize="16" Padding="0,5,0,0" />
+
+		<Grid Width="480" Height="480">
+			
+
+			<!-- Background Image -->
+			<Image Source="Assets/tray.png" Stretch="Fill"  />
+
+			<!-- ScrollViewer on Top -->
+			<ScrollViewer  Width="350" Height="320" VerticalScrollBarVisibility="Auto">
+				<StackPanel Orientation="Vertical" HorizontalAlignment="Center" Spacing="10" Name="RollHistory">
+				</StackPanel>
+			</ScrollViewer>
+
+			<!-- Buttons at the bottom -->
+			<Button Click="ClearHistory" Content="Clear" HorizontalAlignment="Left" Margin="65, 350, 0, 0" />
+			<Button Click="AddHR" Content="New Turn"  HorizontalAlignment="Right" Margin="0, 350, 60, 0" />
+		</Grid>
+
+	</StackPanel>
+</Window>
